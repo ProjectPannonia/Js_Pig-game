@@ -79,8 +79,15 @@ function nextPlayer(){
     //document.querySelector('.player-1-panel').classList.add('active');
 
     document.querySelector('.dice').style.display = 'none';
-}
+};
 
-//dice = Math.floor(Math.random() * 6) + 1;
-//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-//var x = document.querySelector('#score-0').textContent;
+// New game button behaviour
+document.querySelector('.btn-new').addEventListener('click', function(){
+    scores = [0,0];
+    roundScore = 0;
+    activePlayer = 1;
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+});
